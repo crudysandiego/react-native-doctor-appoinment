@@ -2,6 +2,7 @@ import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'rea
 import React from 'react'
 import app from './../../assets/images/app.png'
 import Colors from '../../assets/Shared/Colors';
+import SignInWithOAuth from '../Components/SignInWithOAuth';
 
 export default function Login() {
   return (
@@ -29,22 +30,7 @@ export default function Login() {
             }}>
                 Book Appointments Effortlessly and manager your health journey
             </Text>
-            <TouchableOpacity 
-                style={{
-                    padding:16,
-                    backgroundColor:Colors.PRIMARY,
-                    borderRadius:90,
-                    alignItems:'center',
-                    marginTop:20,
-                    width:Dimensions.get('screen').width*0.8
-                }}
-                onPress={()=>console.log("Login With Google button clicked")}
-            >
-                <Text style={{
-                    fontSize:17,
-                    color:Colors.white
-                }}>Login With Google</Text>
-            </TouchableOpacity>
+            <SignInWithOAuth></SignInWithOAuth>
         </View>
     </View>
   )

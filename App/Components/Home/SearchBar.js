@@ -19,11 +19,11 @@ export default function SearchBar({setSearchText}) {
         borderRadius:8
       }}>
         <Ionicons name="search-outline" size={24} color={Colors.PRIMARY} />
-        <TextInput p
-            laceholder='Search' 
+        <TextInput
+            placeholder='Search' 
             onChangeText={(value)=>setSearchInput(value)}
             onSubmitEditing={()=>setSearchText(searchInput)}
-            style={{width:'100%'}}
+            style={{width:'100%',fontFamily:'Outfit-Regular'}}
         >
         </TextInput>
       </View>

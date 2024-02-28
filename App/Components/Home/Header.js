@@ -32,12 +32,12 @@ export default function Header() {
         />
         <View>
           <Text style={{ 
-            // fontFamily: "appfont" 
+            fontFamily: "Outfit-Regular" 
           }}>Hello,👋 </Text>
           <Text
             style={{
               fontSize: 18,
-            //   fontFamily: "appfont-bold",
+              fontFamily: "Outfit-Bold",
             }}
           >
             {user.fullName}

@@ -12,13 +12,19 @@ const getSlider=()=>AxioInstance.get("/sliders?populate=*");
 
 const getCategories=()=>AxioInstance.get("/categories?populate=*");
 
-const getPremiumHospitals=()=>AxioInstance.get("/hospitals?filters[Premium][$eq]=true&populate=*");
+const getPremiumHospitals=()=>
+AxioInstance.get("/hospitals?filters[Premium][$eq]=true&populate=*");
 
-const getHospitalsByCategory=(category)=>AxioInstance.get("hospitals?filters[categories][Name][$in]="+category+"&populate=*");
+const getHospitalsByCategory=(category)=>
+AxioInstance.get("hospitals?filters[categories][Name][$in]="+category+"&populate=*");
+
+const getDoctorsByCategory=(category)=>
+AxioInstance.get("doctors?filters[categories][Name][$in]="+category+"&populate=*");
 
 export default{
     getSlider,
     getCategories,
     getPremiumHospitals,
-    getHospitalsByCategory
+    getHospitalsByCategory,
+    getDoctorsByCategory
 }
